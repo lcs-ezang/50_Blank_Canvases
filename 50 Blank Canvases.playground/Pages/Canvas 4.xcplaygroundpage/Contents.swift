@@ -18,7 +18,7 @@ for x in stride(from: 0, through: 199, by: 1){
     
     
     //Draw a vertical line
-    canvas.drawLine(fromX: x, fromY: x/2, toX: x, toY: toY)
+    canvas.drawLine(fromX: x, fromY: 0, toX: x, toY: toY)
     
 }
 
