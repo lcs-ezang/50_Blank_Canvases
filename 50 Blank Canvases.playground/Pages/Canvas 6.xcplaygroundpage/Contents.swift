@@ -15,6 +15,62 @@ import PlaygroundSupport
 // Create canvas
 let canvas = Canvas(width: 400, height: 300)
 
+// Create a starting point for travelling through Perlin noise space
+var start = 0.0
+
+//Create a Perlin noise generator
+let p = PerlinGenerator()
+
+
+for i in stride(from: 50, through: 600, by: 100){
+    for y in stride(from: 50, through: 600, by: 100){
+        
+        // Size of circles
+        for l in stride(from: 100, through: 20, by: -20){
+            
+            // Color generator
+
+           
+            //Move through Perlin noise space
+            start += 5
+            
+            //Get Perlin noise (gives us a random number between -3 and 3)
+            let randomValue = g.perlinNoise(x: start)
+            
+            //Convert to a range between 0 and 100
+            let height = map(value: randomValue, fromLower: -3, fromUpper: 3, toLower: 1, toUpper: 361)
+            
+            // Make the height an integer
+            let g = Int(height)
+            
+            let s = random(from: 50, toButNotIncluding: 101)
+            
+            
+            //Brightness
+            //Move through Perlin noise space
+            start += 5
+            
+            //Get Perlin noise (gives us a random number between -3 and 3)
+            let randomValue = p.perlinNoise(x: start)
+            
+            //Convert to a range between 0 and 100
+            let height = map(value: randomValue, fromLower: -3, fromUpper: 3, toLower: 50, toUpper: 100)
+            
+            // Make the height an integer
+            let toY = Int(height)
+            
+            
+            
+            // Color
+            canvas.fillColor = Color.init(hue: g, saturation: s, brightness: toY, alpha: 100)
+            // Drawing the circle
+            canvas.drawEllipse(centreX: i, centreY: y, width: l, height: l)
+            
+            
+        }
+    }
+}
+
 /*:
  ## Add your code below
  

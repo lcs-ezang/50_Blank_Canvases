@@ -12,9 +12,31 @@
 import Cocoa
 import PlaygroundSupport
 
-// Create canvas
-let canvas = Canvas(width: 400, height: 300)
+let canvas = Canvas(width:600, height:600)
 
+// Position of circles
+for i in stride(from: 50, through: 600, by: 100){
+    for y in stride(from: 50, through: 600, by: 100){
+        
+        // Size of circles
+        for p in stride(from: 100, through: 20, by: -20){
+        
+        // Color generator
+        let c = random(from: 0, toButNotIncluding: 361)
+        let s = random(from: 50, toButNotIncluding: 101)
+        let b = random(from: 75, toButNotIncluding: 101)
+        
+        
+        // Color
+        canvas.fillColor = Color.init(hue: c, saturation: s, brightness: b, alpha: 100)
+        // Drawing the circle
+        canvas.drawEllipse(centreX: i, centreY: y, width: p, height: p)
+  
+        
+    }
+}
+}
+// stop this please
 /*:
  ## Add your code below
  
