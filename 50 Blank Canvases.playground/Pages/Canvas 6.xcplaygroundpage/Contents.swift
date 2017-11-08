@@ -33,27 +33,27 @@ for i in stride(from: 50, through: 600, by: 100){
             
             // Color generator
 
-           //Hue
+            //Hue
             //Move through Perlin noise space
-            start += 0.2
-            
+            start += 0.05
+
             //Get Perlin noise (gives us a random number between -1 and 1)
             let value = p.perlinNoise(x: start)
-            
+
             //Convert to a range between 0 and 100
             var newColour = map(value: value, fromLower: -1, fromUpper: 1, toLower: 1, toUpper: 360)
 
             //Test if number are too close
-            if newColour - lastColour > -30 && newColour - lastColour < 30 {
+            if newColour - lastColour > -50 && newColour - lastColour < 50 {
                 newColour += 100
             }
             
             //Random saturation and brightness
-            let s = random(from: 50, toButNotIncluding: 101)
-            let b = random(from: 75, toButNotIncluding: 101)
+            let s = random(from: 40, toButNotIncluding: 91)
+            let b = random(from: 90, toButNotIncluding: 101)
             
             // Color
-            canvas.fillColor = Color.init(hue: Int(newColour), saturation: s, brightness: b, alpha: 100)
+            canvas.fillColor = Color.init(hue: Int(newColour), saturation: s, brightness: b, alpha: 90)
             // Drawing the circle
             canvas.drawEllipse(centreX: i, centreY: y, width: l, height: l)
             

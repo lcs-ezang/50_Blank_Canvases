@@ -15,6 +15,30 @@ import PlaygroundSupport
 // Create canvas
 let canvas = Canvas(width: 400, height: 300)
 
+//declare cords
+let x1 = 300.0
+let x2 = 450.0
+let y1 = 100.0
+let y2 = 500.0
+
+
+//line segment length calculation
+let result = sqrt(pow(x1-x2, 2.0)+pow(y1-y2, 2))
+
+
+//get the difference of the x's
+let DeltaX = x1-x2
+
+//get the difference of the y's
+let DeltaY = y1-y2
+
+//Get the sum of the squares
+let sumOfSquares = pow(DeltaX, 2) + pow(DeltaY, 2)
+
+// Evaulate the square root
+let result1 = sqrt(sumOfSquares)
+
+
 /*:
  ## Add your code below
  
