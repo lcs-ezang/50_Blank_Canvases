@@ -25,6 +25,22 @@ let canvas = Canvas(width: 400, height: 300)
 // Replace this comment with your first comment – what is the goal of the code you're about to write?
 
 
+//Put in number of sides
+let sides = 4
+//Degrees of each side
+let sideDegrees = Int((sides - 2) * 180)
+
+
+//Drawing a n-gon
+canvas.translate(byX: 175, byY: 50)
+canvas.defaultLineWidth = 5
+
+//Draw lines
+for _ in 1...sides {
+    canvas.drawLine(fromX: 0, fromY: 0, toX: 750/sides, toY: 0)
+    canvas.translate(byX: 750/sides, byY: 0)
+    canvas.rotate(by: CGFloat(180-sideDegrees/sides))
+}
 
 /*:
  ## Use source control

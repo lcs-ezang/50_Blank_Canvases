@@ -37,7 +37,7 @@ canvas.translate(byX: 100, byY: 0)
 canvas.rotate(by: 120)
 }
 
-
+canvas.drawEllipse(centreX: 50, centreY: 40, width: 35, height: 20)
 
 /*:
  ## Use source control

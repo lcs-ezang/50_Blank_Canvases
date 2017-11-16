@@ -25,6 +25,16 @@ let canvas = Canvas(width: 400, height: 300)
 // Replace this comment with your first comment – what is the goal of the code you're about to write?
 
 
+//Drawing a square
+canvas.translate(byX: 75, byY: 100)
+canvas.defaultLineWidth = 5
+
+//Draw lines
+for _ in stride(from: 1, to: 5, by: 1){
+    canvas.drawLine(fromX: 0, fromY: 0, toX: 96, toY: 0)
+    canvas.translate(byX: 100, byY: 0)
+    canvas.rotate(by: 90)
+}
 
 /*:
  ## Use source control
