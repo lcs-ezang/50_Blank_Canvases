@@ -1,5 +1,5 @@
 //: [Previous](@previous) / [Next](@next)
-//: # A Blank Canvas
+//: # Abstraction with Functions
 //:
 //: Use this page to experiment. Have fun!
 /*:
@@ -23,6 +23,19 @@ let canvas = Canvas(width: 400, height: 300)
  Use whitespace and comments as appropriate.
  */
 // Replace this comment with your first comment – what is the goal of the code you're about to write?
+
+//Draw a trangle using the metaphor of a "turtle"
+
+//Step one move to the starting point
+canvas.translate(byX: 75, byY: 100)
+canvas.defaultLineWidth = 5
+
+
+for _ in stride(from: 1, to: 4, by: 1){
+canvas.drawLine(fromX: 0, fromY: 0, toX: 96, toY: 0)
+canvas.translate(byX: 100, byY: 0)
+canvas.rotate(by: 120)
+}
 
 
 

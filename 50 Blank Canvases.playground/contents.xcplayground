@@ -7,9 +7,8 @@
         <page name='Canvas 4'/>
         <page name='Canvas 5'/>
         <page name='Canvas 6'/>
-        <page name='Canvas 7'/>
         <page name='Canvas 8'/>
-        <page name='Canvas 9'/>
+        <page name='Triangle'/>
         <page name='Canvas 10'/>
         <page name='Canvas 11'/>
         <page name='Canvas 12'/>
@@ -51,5 +50,6 @@
         <page name='Canvas 48'/>
         <page name='Canvas 49'/>
         <page name='Canvas 50'/>
+        <page name='Math Operations'/>
     </pages>
 </playground>
