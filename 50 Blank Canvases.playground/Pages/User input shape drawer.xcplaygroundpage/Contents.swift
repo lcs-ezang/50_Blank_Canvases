@@ -26,13 +26,13 @@ let canvas = Canvas(width: 400, height: 300)
 
 
 //Put in number of sides
-let sides = 4
+let sides = 5
 //Degrees of each side
 let sideDegrees = Int((sides - 2) * 180)
 
 
 //Drawing a n-gon
-canvas.translate(byX: 175, byY: 50)
+canvas.translate(byX: sides, byY: 50)
 canvas.defaultLineWidth = 5
 
 //Draw lines
